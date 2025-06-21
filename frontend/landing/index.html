@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mail Mentor - Smart Email Reply Generator</title>
+    <style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical center */
+    align-items: center;      /* horizontal center */
+
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+
+  .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    user-select: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #e6e6e6;
+    color: #0056b3;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.3); semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    z-index: 1000;
+  }
+</style>
+
+</head>
+<body>
+
+  <h1>Mail Mentor ✉️</h1>
+  <p>Generate professional, casual, or friendly email replies instantly with the power of AI. Save time, sound great, and send with confidence!</p>
+  <button class="btn-primary" id="startBtn">Try It Now</button>
+
+  <footer>© 2025 Arafat Hossain Ankon. All rights reserved.</footer>
+
+  <script>
+    document.getElementById('startBtn').addEventListener('click', () => {
+  window.location.href = "/Email-Generator-/frontend/index.html";
+});
+
+  </script>
+
+</body>
+</html>
