@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Email Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Email Reply Generator ✉️</h1>
+
+    <label for="emailInput">✍️ Paste Email:</label>
+    <textarea id="emailInput" placeholder="Paste the email you received..." rows="8"></textarea>
+
+    <label for="toneSelect">🎭 Select Tone:</label>
+    <select id="toneSelect">
+      <option value="professional">Professional</option>
+      <option value="casual">Casual</option>
+      <option value="friendly">Friendly</option>
+    </select>
+
+    <button onclick="generateReply()">✨ Generate Reply</button>
+
+    <div id="loading" class="loading-container hidden">
+      <div class="loading-bar"></div>
+    </div>
+
+    <h2>📝 Generated Reply:</h2>
+    <div id="output"></div>
+    <button id="copyBtn" class="hidden" onclick="copyReply()">📋 Copy Reply</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
