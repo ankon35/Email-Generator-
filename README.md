@@ -4,23 +4,21 @@ Mail Mentor is a full-stack AI-powered web application that helps users generate
 
 ---
 
-## 🚀 Live Demo
 
-👉 [Try Mail Mentor Now](#) *(Add your deployment URL here)*
-
----
 
 ## 📸 Screenshots
 
 ### 🖼️ Landing Page
-![Landing Page](.Output/Screenshot%202025-06-21%20212918.png)
+![Landing Page](./Output/Screenshot%202025-06-21%20212918.png)
 
 ### 🖼️ Home Page Overview
 ![Home Page](./Output/Input%20Mail.png)
+---
 ![Reply Generator Page](./Output/Input%20Mail.png)
 
 ### 🖼️ Project Demo
 ![Project Demo](./Output/Screenshot%202025-06-21%20224549.png)
+---
 ![Project Demo](./Output/Screenshot%202025-06-21%20224611.png)
 
 ---
