@@ -19,122 +19,147 @@ body {
   margin: 0;
   padding: 0;
 } */
+/* General Reset */
+/* General Reset */
+/* General Reset */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+/* Main Container */
 .container {
-  max-width: 800px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 30px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
+/* Headings */
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #2c3e50;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 25px;
 }
 
+h2 {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 25px 0 10px;
+}
+
+/* Labels */
 label {
-  font-weight: 600;
-  margin-top: 20px;
   display: block;
-  margin-bottom: 6px;
-  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 600;
 }
 
+/* Inputs and Textareas */
 textarea,
+input[type="email"],
+input[type="text"],
 select {
   width: 100%;
   padding: 12px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border: 1px solid #ccd6dd;
-  border-radius: 8px;
-  box-sizing: border-box;
-  resize: vertical;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease;
 }
 
-select {
-  cursor: pointer;
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  background: #fff;
 }
 
+/* Buttons */
 button {
-  width: 100%;
-  padding: 14px;
-  background-color: #4a90e2;
-  color: white;
-  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
+  padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #357abd;
-}
-
-#output {
-  white-space: pre-wrap;
-  background: #f0f2f5;
-  border-radius: 8px;
-  padding: 15px;
-  border: 1px solid #d1d1d1;
-  min-height: 100px;
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-.loading-container {
-  width: 100%;
-  height: 6px;
-  background: #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 15px 0;
-}
-
-.loading-bar {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, #4a90e2, #357abd);
-  animation: loading 2s infinite;
-  border-radius: 8px;
-}
-
-@keyframes loading {
-  0% {
-    margin-left: -100%;
-    width: 100%;
-  }
-  50% {
-    margin-left: 0%;
-    width: 100%;
-  }
-  100% {
-    margin-left: 100%;
-    width: 100%;
-  }
-}
-
-#copyBtn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #2ecc71;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-  width: auto;
-}
-
-#copyBtn:hover {
-  background-color: #27ae60;
+  background-color: #0056b3;
 }
 
 .hidden {
   display: none;
+}
+
+/* Output / Reply Box */
+#output {
+  white-space: pre-wrap;
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 120px;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* Make output editable */
+#output[contenteditable="true"] {
+  cursor: text;
+  border: 1px solid #007bff;
+  background-color: #fefefe;
+}
+
+#output:focus {
+  outline: 2px solid #007bff;
+}
+
+/* Loading Bar */
+.loading-container {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.loading-bar {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  animation: loading 1.5s infinite linear;
+  border-radius: 5px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Copy and Status Buttons */
+#copyBtn {
+  margin-top: 10px;
+}
+
+#emailStatus {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
 }

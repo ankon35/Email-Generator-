@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +7,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Email Reply Generator ✉️</h1>
+    <h1>Mail Mentor ✉️</h1>
 
     <label for="emailInput">✍️ Paste Email:</label>
     <textarea id="emailInput" placeholder="Paste the email you received..." rows="8"></textarea>
@@ -28,9 +25,20 @@
       <div class="loading-bar"></div>
     </div>
 
-    <h2>📝 Generated Reply:</h2>
-    <div id="output"></div>
+    <h2>📝 Generated Reply (Editable):</h2>
+    <div id="output" contenteditable="true"></div>
     <button id="copyBtn" class="hidden" onclick="copyReply()">📋 Copy Reply</button>
+
+    <h2>📨 Send Reply via Email:</h2>
+    <input type="email" id="toEmail" placeholder="Recipient Email" />
+    <input type="text" id="subjectLine" placeholder="Subject" />
+    <button onclick="sendReply()">📬 Send Email</button>
+
+    <div id="sendLoading" class="loading-container hidden">
+      <div class="loading-bar"></div>
+    </div>
+
+    <div id="emailStatus"></div>
   </div>
 
   <script src="script.js"></script>
